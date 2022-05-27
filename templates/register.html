@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style_anjuman.css" >
+    <link rel="stylesheet" href="style.css" >
     <!-- Adding jquery libararies -->
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
       </script>
@@ -20,25 +20,29 @@
 <body>
  
     <div class="container">
-     
+        
           
           <form class="login-form">
-            <h1>Musify</h1>
             <div class="fo">
-              
-              <div class="login-form">
+              <h1>Musify</h1>
+              <div class="register-form">
+                  <div class="form-control">
+                    <input type="text" placeholder="name" name="nametext" id="nametext"/>
+                  </div>
                 <div class="form-control">
                   <i data-feather="at-sign"></i>
                  
-                  <input  placeholder="Email" type="email" id="loginemail" name="loginemail" required/>
+                  
+            <input type="text" placeholder="email address" type="email" id="registeremail" name="registeremail" required/>
+            
                 </div>
                 <div class="form-control">
                   <i data-feather="key"></i>
-                  <input type="password" placeholder="password" id="loginpassword" name="loginpassword" required/>
+                  <input type="password" placeholder="password" id="RegisterPassword" name="RegisterPassword" required/> 
                 </div>
                 
-                <input type="button" id="loginbtn" name="loginbtn" value="Log In">
-                <p class="message">Not registered? <a href="register.html">Create an account</a></p>
+                <input type="button" id="registerbtn" name="registerbtn" value="Sign Up">
+                <p class="message">Have an account? <a href="index.html">Log In</a></p>
               </div>
 
             </div>
@@ -51,7 +55,7 @@
         <img src="1.png">
         </div>
       
-      <script type = "module" src="{{ url_for('static',filename='login.js')}}"></script>
+      <script type = "module" src="login.js"></script>
 </body>
 
 </html>
