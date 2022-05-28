@@ -1,6 +1,4 @@
-$('.message a').click(function(){
-    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
- });
+
 
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
@@ -27,49 +25,42 @@ $('.message a').click(function(){
   
   const registerbtn = document.getElementById("registerbtn")
   const loginbtn = document.getElementById("loginbtn")
-  
-console.log(loginbtn)
 
-  loginbtn.addEventListener('click',(e)=>{
 
-    const email = document.getElementById("loginemail").value
-    const password = document.getElementById("loginpassword").value
-    
+  registerbtn.addEventListener('click',(e)=>{
 
-    signInWithEmailAndPassword(auth, email, password)
-      
-    .then((userCredential) => {
-  // Signed in 
-        const user = userCredential.user;
-  // ... user.uid
+      const email = document.getElementById("registeremail").value
+      const password = document.getElementById("RegisterPassword").value
+      const name = document.getElementById("nametext").value
 
-  var lgdate =new Date()
-  update(ref(database, 'users/' + user.uid), {
-  last_login : lgdate,
-})
-.then(() => {
-// Data saved successfully!
-window.location.replace("home.html");
+      createUserWithEmailAndPassword(auth, email, password)
+        
+      .then((userCredential) => {
+    // Signed in 
+          const user = userCredential.user;
+    // ... user.uid
+    set(ref(database, 'users/' + user.uid), {
+    username: name,
+    email: email
+  })
+  .then(() => {
+  // Data saved successfully!
+  window.location.replace("home.html");
 })
 .catch((error) => {
-// The write failed...
-alert(error);
+  // The write failed...
+  alert(error);
 });
 
-          
-})
-     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      // 
-      });
+            
+  })
+       .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        // 
+        });
 
-});
+  });
 
-
-
-
-
-  
   
  

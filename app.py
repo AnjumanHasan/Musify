@@ -2,15 +2,19 @@ from flask import Flask
 from flask import request
 from flask import render_template
 import pickle 
+import Recommenders as Recommenders
 
 app = Flask(__name__)
-model = pickle.load(open(('recommender.pickle','rb')))
+# model =pickle.load("recommender.pickle","r")
+
+with open ('recommender.pickle','rb') as f :
+    model = pickle.load(f)
 
 @app.route('/', methods=['GET'])
 def hello() :
     return render_template('index.html')
 
-@app.route('/home', methods=['GET'])
+@app.route('/register', methods=['GET'])
 def home() :
     return render_template('home.html')
 

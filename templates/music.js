@@ -11,40 +11,40 @@ new Vue({
         isTimerPlaying: false,
         tracks: [
           {
-            name: "Mekanın Sahibi",
-            artist: "Norm Ender",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
+            name: "Love Story",
+            artist: "Taylor Swift",
+            cover:"http://images4.fanpop.com/image/photos/14800000/Love-Story-FanMade-Single-Cover-fearless-taylor-swift-album-14882713-600-600.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
             url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
             favorited: false
           },
           {
-            name: "Everybody Knows",
-            artist: "Leonard Cohen",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
+            name: "The Only Exception",
+            artist: "Paramore",
+            cover: "https://i1.sndcdn.com/artworks-WwkDzrXzBchuLBxv-NROXJg-t500x500.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
             url: "https://www.youtube.com/watch?v=Lin-a2lTelg",
             favorited: true
           },
           {
-            name: "Extreme Ways",
-            artist: "Moby",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
+            name: "Lucky",
+            artist: "Jason Mraz",
+            cover: "https://upload.wikimedia.org/wikipedia/en/f/fd/Jason_Mraz_-_Lucky_%28Official_Single_Cover%29.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
             url: "https://www.youtube.com/watch?v=ICjyAe9S54c",
             favorited: false
           },
           {
-            name: "Butterflies",
-            artist: "Sia",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
+            name: "Alejandro",
+            artist: "Lady Gaga",
+            cover: "https://live.staticflickr.com/4056/4619782833_55ca8dd884_z.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
             url: "https://www.youtube.com/watch?v=kYgGwWYOd9Y",
             favorited: false
           },
           {
-            name: "The Final Victory",
-            artist: "Haggard",
+            name: "I Kissed a Girl",
+            artist: "Katy Perry",
             cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
             url: "https://www.youtube.com/watch?v=0WlpALnQdN8",
@@ -82,10 +82,13 @@ new Vue({
             url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
             favorited: false
           }
+          
         ],
         currentTrack: null,
         currentTrackIndex: 0,
-        transitionName: null
+        transitionName: null,
+
+
       };
     },
     methods: {
@@ -164,6 +167,10 @@ new Vue({
         this.currentTrack = this.tracks[this.currentTrackIndex];
         this.resetPlayer();
       },
+      updateCard() {
+        
+       
+      },
       resetPlayer() {
         this.barWidth = 0;
         this.circleLeft = 0;
@@ -199,7 +206,7 @@ new Vue({
         this.isTimerPlaying = true;
       };
   
-      // this is optional (for preload covers)
+      
       for (let index = 0; index < this.tracks.length; index++) {
         const element = this.tracks[index];
         let link = document.createElement('link');
