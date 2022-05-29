@@ -33,3 +33,10 @@ To run , run the following command
 ```
 Then run the app.py file on the flask server.
 
+
+## Acknowledgements
+
+ - [For algorithms](https://medium.com/)
+ - [For Dataset](http://millionsongdataset.com/)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
