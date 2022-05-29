@@ -27,7 +27,7 @@ To run , run the following command
 
 ```bash
   conda create -n env
-  conda acitvate env
+  conda activate env
   pip install flask *(if not already installed)*
 
 ```
