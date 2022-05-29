@@ -15,7 +15,7 @@ new Vue({
             artist: "Taylor Swift",
             cover:"http://images4.fanpop.com/image/photos/14800000/Love-Story-FanMade-Single-Cover-fearless-taylor-swift-album-14882713-600-600.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-            url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
+            url: "https://www.youtube.com/watch?v=8xg3vE8Ie_E",
             favorited: false
           },
           {
@@ -24,7 +24,7 @@ new Vue({
             cover: "https://i1.sndcdn.com/artworks-WwkDzrXzBchuLBxv-NROXJg-t500x500.jpg",
             source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
             url: "https://www.youtube.com/watch?v=Lin-a2lTelg",
-            favorited: true
+            favorited: false
           },
           {
             name: "Lucky",

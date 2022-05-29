@@ -27,7 +27,7 @@
 
 
 body {
-	background: radial-gradient(#8285a0, #eff1f3);
+	background: radial-gradient(#bcbaba, #b3b3b3);
 	min-height: 100vh;
 	font-family: 'Poppins', sans-serif;
 	display: flex;
@@ -54,7 +54,7 @@ form {
 }
 
 h1 {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	opacity: 0.8;
 	text-transform: uppercase;
 	margin-top: 0px;
@@ -100,7 +100,7 @@ svg {
 }
 
 input::placeholder {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
